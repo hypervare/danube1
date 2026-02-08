@@ -271,6 +271,8 @@ body{
 .secondary-link{
     font-size:14px;
     color:#111;
+     border: none;
+    background: transparent;
     cursor:pointer;
 }
 
@@ -2403,3 +2405,4 @@ body{
     from{ transform: scale(.85); opacity: 0; }
     to{ transform: scale(1); opacity: 1; }
 }
+
