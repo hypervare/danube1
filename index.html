@@ -23,7 +23,7 @@
             <li><a href="#">Insights</a></li>
         </ul>
 
-        <div class="fxNav-cta">Contact Us</div>
+        <button class="fxNav-cta">Contact Us</button>
     </div>
 </nav>
 
@@ -770,7 +770,7 @@
             <div class="mf-contact mf-animate right">
                 <h4>Founder</h4>
                 <p>We are here to change<br>your future.</p>
-                <div class="mf-btn">Contact Us</div>
+                <button class="mf-btn">Contact Us</button>
             </div>
 
             <div class="mf-subscribe mf-animate right">
@@ -1119,16 +1119,25 @@ footerObserver.observe(document.querySelector(".mf-bottom"));
 
 
     
+
 <script>
 document.addEventListener("DOMContentLoaded", () => {
 
     const popup = document.getElementById("fxFormPopup");
     const closeBtn = document.querySelector(".fx-form-close");
 
+    /* 🔹 AUTO POPUP AFTER 2 SECONDS */
+    setTimeout(() => {
+        popup.style.display = "flex";
+    }, 2000);
+
+    /* 🔹 OPEN POPUP ON BUTTON CLICK (EXCEPT SLIDER ARROWS) */
     document.querySelectorAll("button").forEach(btn => {
 
-        
-        if(btn.classList.contains("g-prev") || btn.classList.contains("g-next")){
+        if (
+            btn.classList.contains("g-prev") ||
+            btn.classList.contains("g-next")
+        ) {
             return;
         }
 
@@ -1138,11 +1147,14 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    /* 🔹 CLOSE BUTTON */
+    closeBtn.onclick = () => {
+        popup.style.display = "none";
+    };
 
-    closeBtn.onclick = () => popup.style.display = "none";
-
+    /* 🔹 CLICK OUTSIDE TO CLOSE */
     popup.onclick = e => {
-        if(e.target === popup){
+        if (e.target === popup) {
             popup.style.display = "none";
         }
     };
@@ -1151,4 +1163,5 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 </body>
 </html>
+
 
