@@ -2333,4 +2333,73 @@ body{
     .contact-map button{
         font-size: 14px;
     }
+
+}
+
+
+
+
+
+
+
+
+
+
+.fx-form-popup{
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.65);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+}
+
+/* FORM BOX */
+.fx-form-box{
+    background: #fff;
+    padding: 28px;
+    width: 90%;
+    max-width: 420px;
+    border-radius: 18px;
+    position: relative;
+    animation: popFade .35s ease;
+}
+
+/* FORM */
+.fx-popup-form{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.fx-popup-form input,
+.fx-popup-form textarea{
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+.fx-popup-form button{
+    background: #000;
+    color: #fff;
+    padding: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* CLOSE */
+.fx-form-close{
+    position: absolute;
+    top: 14px;
+    right: 18px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* ANIMATION */
+@keyframes popFade{
+    from{ transform: scale(.85); opacity: 0; }
+    to{ transform: scale(1); opacity: 1; }
 }
