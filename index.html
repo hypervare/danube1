@@ -795,6 +795,30 @@
     </div>
 </section>
 
+
+
+
+
+
+
+
+    <div class="fx-form-popup" id="fxFormPopup">
+    <div class="fx-form-box">
+        <span class="fx-form-close">&times;</span>
+
+        <h2>Contact Us</h2>
+        <p>Fill the form and we’ll reach out shortly.</p>
+
+        <form class="fx-popup-form">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <input type="text" placeholder="Phone Number">
+            <textarea rows="4" placeholder="Your Message"></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
 <script>
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -1084,5 +1108,47 @@ document.querySelectorAll(".mf-animate").forEach(el => footerObserver.observe(el
 footerObserver.observe(document.querySelector(".mf-bottom"));
 </script>
 
+
+
+
+
+
+
+
+
+
+
+    
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const popup = document.getElementById("fxFormPopup");
+    const closeBtn = document.querySelector(".fx-form-close");
+
+    document.querySelectorAll("button").forEach(btn => {
+
+        
+        if(btn.classList.contains("g-prev") || btn.classList.contains("g-next")){
+            return;
+        }
+
+        btn.addEventListener("click", e => {
+            e.preventDefault();
+            popup.style.display = "flex";
+        });
+    });
+
+
+    closeBtn.onclick = () => popup.style.display = "none";
+
+    popup.onclick = e => {
+        if(e.target === popup){
+            popup.style.display = "none";
+        }
+    };
+
+});
+</script>
 </body>
 </html>
+
