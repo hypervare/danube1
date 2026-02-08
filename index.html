@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Real Estate Hero Section</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+<link rel="stylesheet" href="index.css">
+
+
+</head>
+
+<body>
+
+<nav class="fxNav">
+    <div class="fxNav-inner">
+        <div class="fxNav-logo">MONTE</div>
+
+        <ul class="fxNav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Properties</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Insights</a></li>
+        </ul>
+
+        <div class="fxNav-cta">Contact Us</div>
+    </div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+<section class="hero-section">
+
+    <div class="hero-card">
+
+        <!-- LEFT -->
+        <div class="hero-left">
+
+            <div class="hero-top">
+                <div class="logo">MONTE</div>
+                <div class="menu">☰</div>
+            </div>
+
+            <div class="hero-text">
+                <small>Building Your Dreams</small>
+                <h1>
+                    Real Estate in Dubai:<br>
+                    Ideal for Living and Investing
+                </h1>
+            </div>
+
+            <div class="hero-actions">
+                <div class="primary-btn">Explore All</div>
+                <div class="secondary-link">Our Properties →</div>
+            </div>
+
+        </div>
+
+        <!-- RIGHT -->
+        <div class="hero-right">
+
+            <div class="image-window">
+                <img src="assests/mainhero2.jpg" alt="Dubai">
+            </div>
+
+            <div class="info-badge">
+                More than 1500 real estate properties
+            </div>
+
+            <div class="download-badge">
+                Catalog download ⬇
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="scroll-expand" id="scrollSection">
+
+    <div class="expand-track">
+        <div class="expand-box" id="expandBox">
+            <img src="assests/katsiaryna-endruszkiewicz-pvhotwukSww-unsplash.jpg" />
+            <div class="expand-text">
+                Apartments with an initial payment from $25,000 • interest-free
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="gallery-section">
+
+    <div class="gallery-heading">
+        <h2>Explore Our Property Portfolio</h2>
+        <p>Handpicked luxury residences designed for modern living</p>
+    </div>
+
+    <div class="gallery-container">
+        <div class="gallery-track">
+
+            <!-- CARD -->
+            <div class="gallery-card">
+                <img src="assests/gallery1.jpg" alt="">
+                <div class="overlay">
+                    <div class="overlay-inner">
+                        <h3>Azure Heights</h3>
+                        <p class="subtitle">Luxury Residences</p>
+                        <div class="info">
+                            <span>📍 Dubai</span>
+                            <span>🏢 Apartment</span>
+                        </div>
+                        <button>View Project →</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DUPLICATE CARDS -->
+            <div class="gallery-card"><img src="assests/gallery2.jpg"><div class="overlay"><div class="overlay-inner"><h3>Azure Heights</h3><p class="subtitle">Luxury Residences</p><div class="info"><span>📍 Dubai</span><span>🏢 Apartment</span></div><button>View Project →</button></div></div></div>
+            <div class="gallery-card"><img src="assests/gallery3.jpg"><div class="overlay"><div class="overlay-inner"><h3>Azure Heights</h3><p class="subtitle">Luxury Residences</p><div class="info"><span>📍 Dubai</span><span>🏢 Apartment</span></div><button>View Project →</button></div></div></div>
+            <div class="gallery-card"><img src="assests/gallery4.jpg"><div class="overlay"><div class="overlay-inner"><h3>Azure Heights</h3><p class="subtitle">Luxury Residences</p><div class="info"><span>📍 Dubai</span><span>🏢 Apartment</span></div><button>View Project →</button></div></div></div>
+            <div class="gallery-card"><img src="assests/gallery5.jpg"><div class="overlay"><div class="overlay-inner"><h3>Azure Heights</h3><p class="subtitle">Luxury Residences</p><div class="info"><span>📍 Dubai</span><span>🏢 Apartment</span></div><button>View Project →</button></div></div></div>
+
+        </div>
+    </div>
+
+    <div class="gallery-nav">
+        <button class="g-prev">←</button>
+        <button class="g-next">→</button>
+    </div>
+
+</section>
+
+
+<script>
+(() => {
+    const track = document.querySelector(".gallery-track");
+    const slides = document.querySelectorAll(".gallery-card");
+    const next = document.querySelector(".g-next");
+    const prev = document.querySelector(".g-prev");
+
+    let index = 0;
+
+    function slideWidth(){
+        return slides[0].offsetWidth + 32;
+    }
+
+    function move(){
+        track.style.transform =
+            `translateX(-${index * slideWidth()}px)`;
+    }
+
+    next.onclick = () => {
+        if(index < slides.length - 1){
+            index++;
+            move();
+        }
+    };
+
+    prev.onclick = () => {
+        if(index > 0){
+            index--;
+            move();
+        }
+    };
+
+    window.addEventListener("resize", move);
+})();
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="stats-section">
+
+    <div class="stats-card">
+
+        <!-- LEFT -->
+        <div class="stats-left">
+
+            <p class="intro">
+                At Golden Gate Properties, we offer more than just real estate services.
+                We provide a premium experience tailored to exceed expectations.
+            </p>
+
+            <div class="stats-list">
+
+                <div class="stat">
+                    <h2>85+</h2>
+                    <div class="stat-text">
+                        <span class="label">Successful</span>
+                        <span class="desc">Transactions Monthly</span>
+                    </div>
+                </div>
+
+                <div class="stat">
+                    <h2>84%</h2>
+                    <div class="stat-text">
+                        <span class="label">Customer</span>
+                        <span class="desc">Satisfaction Rate</span>
+                    </div>
+                </div>
+
+                <div class="stat">
+                    <h2>429</h2>
+                    <div class="stat-text">
+                        <span class="label">Exquisite</span>
+                        <span class="desc">Properties Available</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT -->
+        <div class="stats-right">
+
+            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93" alt="Dubai">
+
+            <button class="contact-btn">Contact Us Now</button>
+
+            <div class="floating-card">
+                <strong>Special Offer</strong>
+                Get consultation with our expert
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+<section class="solutions-section" id="solutionsSection">
+
+    <div class="solutions-card">
+
+        <!-- LEFT -->
+        <div class="solutions-left">
+            <h2>
+                Tailored Solutions<br>
+                for Your Real Estate<br>
+                Needs
+            </h2>
+
+            <a href="#">Explore More →</a>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="solutions-list">
+
+            <div class="solution-item">
+                <div class="solution-info">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
+                    <span>Market Analysis</span>
+                </div>
+                <div class="solution-arrow">↓</div>
+            </div>
+
+            <div class="solution-item">
+                <div class="solution-info">
+                    <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
+                    <span>Investment Planning</span>
+                </div>
+                <div class="solution-arrow">↓</div>
+            </div>
+
+            <div class="solution-item">
+                <div class="solution-info">
+                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e">
+                    <span>Property Valuation</span>
+                </div>
+                <div class="solution-arrow">↓</div>
+            </div>
+
+            <div class="solution-item">
+                <div class="solution-info">
+                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750">
+                    <span>Legal Consultation</span>
+                </div>
+                <div class="solution-arrow">↓</div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+<section class="venn-section" id="vennSection">
+
+    <div class="venn-card">
+
+        <h2>Path to Smart Ownership</h2>
+
+        <div class="venn-area" id="vennArea">
+
+            <div class="circle one">
+                <span>10% Initial Payment</span>
+            </div>
+
+            <div class="circle two">
+                <span>5 Years Installment<br>0% Overpayment</span>
+            </div>
+
+            <div class="circle three">
+                <span>Rental Income<br>Up to 15%</span>
+            </div>
+
+            <div class="merged-content">
+                <p>10% Initial Payment</p>
+                <p>5 Years Installment · 0% Overpayment</p>
+                <p>Rental Income up to 15%</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+<section class="why-section">
+
+    <div class="why-card">
+
+        <!-- HEADER -->
+        <div class="why-header">
+            <div class="why-title">
+                <small>
+                    <span class="dot"></span>
+                    Explore Our Advantages
+                </small>
+                <h2>
+                    Why Dubai Stands<br>
+                    Unrivalled?
+                </h2>
+            </div>
+
+            <div class="contact-btn">
+                <i class="bi bi-telephone"></i>
+                Contact Us Now
+            </div>
+        </div>
+
+        <!-- GRID -->
+        <div class="why-grid">
+
+            <div class="why-item">
+                <div class="why-icon"><i class="bi bi-people"></i></div>
+                <h4>Diversity</h4>
+                <p>Approximately 90% of Dubai’s population consists of foreigners.</p>
+            </div>
+
+            <div class="why-item">
+                <div class="why-icon"><i class="bi bi-shield-check"></i></div>
+                <h4>Safety</h4>
+                <p>Dubai ranks among the safest cities worldwide.</p>
+            </div>
+
+            <div class="why-item">
+                <div class="why-icon"><i class="bi bi-currency-dollar"></i></div>
+                <h4>Stable Currency</h4>
+                <p>The dirham is pegged to the US dollar for over 20 years.</p>
+            </div>
+
+            <div class="why-item">
+                <div class="why-icon"><i class="bi bi-passport"></i></div>
+                <h4>Resident Visa</h4>
+                <p>Real estate investment offers eligibility for residency.</p>
+            </div>
+
+            <div class="why-item">
+                <div class="why-icon"><i class="bi bi-piggy-bank"></i></div>
+                <h4>Tax-Free Income</h4>
+                <p>Rental income and capital gains are tax-exempt.</p>
+            </div>
+
+            <div class="why-item">
+                <div class="why-icon"><i class="bi bi-graph-down"></i></div>
+                <h4>Low Mortgage Rates</h4>
+                <p>Competitive mortgage rates between 5–7%.</p>
+            </div>
+
+            <div class="why-item">
+                <div class="why-icon"><i class="bi bi-globe"></i></div>
+                <h4>Remote Acquisition</h4>
+                <p>Complete property purchase assistance from anywhere.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="section">
+<div class="wrapper">
+
+<div class="columns">
+
+    <!-- COLUMN 1 -->
+    <div class="column">
+        <div class="card small">
+            <img src="assests/card12.jpg">
+            <div class="arrow">↗</div>
+            <span>Luxury Villas</span>
+        </div>
+        <div class="card large">
+            <img src="assests/card11.jpg">
+            <div class="arrow">↗</div>
+            <span>Penthouse Suites</span>
+        </div>
+    </div>
+
+    <!-- COLUMN 2 -->
+    <div class="column">
+        <div class="card mid">
+            <img src="assests/card10.jpg">
+            <div class="arrow">↗</div>
+            <span>Apartments</span>
+        </div>
+        <div class="card large">
+            <img src="assests/card9.jpg">
+            <div class="arrow">↗</div>
+            <span>Beachfront</span>
+        </div>
+        <div class="card small">
+            <img src="assests/card1.jpg">
+            <div class="arrow">↗</div>
+            <span>Commercial</span>
+        </div>
+    </div>
+
+    <!-- COLUMN 3 -->
+    <div class="column">
+        <div class="card small">
+            <img src="assests/card2.jpg">
+            <div class="arrow">↗</div>
+            <span>Townhouses</span>
+        </div>
+        <div class="card large">
+            <img src="assests/card3.jpg">
+            <div class="arrow">↗</div>
+            <span>Waterfront Homes</span>
+        </div>
+        <button class="center-btn">Explore All Properties →</button>
+    </div>
+
+    <!-- COLUMN 4 -->
+    <div class="column">
+        <div class="card large">
+            <img src="assests/card4.jpg">
+            <div class="arrow">↗</div>
+            <span>Golf Residences</span>
+        </div>
+        <div class="card small">
+            <img src="assests/card5.jpg">
+            <div class="arrow">↗</div>
+            <span>Studios</span>
+        </div>
+        <div class="card mid">
+            <img src="assests/card6.jpg">
+            <div class="arrow">↗</div>
+            <span>Lofts</span>
+        </div>
+    </div>
+
+    <!-- COLUMN 5 -->
+    <div class="column">
+        <div class="card large">
+            <img src="assests/card7.jpg">
+            <div class="arrow">↗</div>
+            <span>Desert Retreats</span>
+        </div>
+        <div class="card mid">
+            <img src="assests/card8.jpg">
+            <div class="arrow">↗</div>
+            <span>Urban Living</span>
+        </div>
+    </div>
+
+</div>
+
+</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+<section class="faq-section">
+
+<div class="faq-wrapper">
+
+    <!-- LEFT -->
+    <div class="faq-left">
+        <small>● Explore Our Advantages</small>
+        <h2>Frequent Asked<br>Questions</h2>
+        <p>
+            At Monte, we offer more than just real estate services. 
+            We provide an unparalleled experience tailored to meet your needs.
+        </p>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="faq-list">
+
+        <div class="faq-item">
+            <button class="faq-question">
+                What types of properties do we offer in Dubai?
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                We offer apartments, villas, townhouses, penthouses, and investment properties across Dubai.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                What are the payment options available?
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                Flexible payment plans including installments, post-handover plans, and mortgage assistance.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Can foreign nationals buy property in Dubai?
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                Yes, foreign nationals can legally purchase freehold properties in designated areas.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Is residency visa available through property investment?
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                Eligible property investments can qualify buyers for long-term residency visas.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Do you provide property management services?
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                Yes, we offer complete property management including rentals, maintenance, and tenant handling.
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="contact-section">
+    <div class="contact-card">
+
+        <!-- LEFT -->
+        <div class="contact-left">
+            <small class="contact-tag">Contact us</small>
+            <h2>Get in Touch<br>with Our Team</h2>
+            <p>
+                We’re here to answer your questions, discuss your project,
+                and help you find the best real estate solutions in Dubai.
+            </p>
+
+            <form class="contact-form">
+                <input type="text" placeholder="Your full name" required>
+                <input type="email" placeholder="Email address" required>
+                <input type="text" placeholder="Company name (optional)">
+                <input type="text" placeholder="Subject">
+                <textarea rows="4" placeholder="Tell us how we can help"></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="contact-right">
+            <h4>Prefer a Direct Approach?</h4>
+
+            <ul class="contact-info">
+                <li>📞 +62 8234 5674 8901</li>
+                <li>✉️ contact@monte.com</li>
+                <li>🕘 Mon–Fri · 9AM–6PM (GMT)</li>
+            </ul>
+
+            <div class="contact-map">
+                <p>Visit Our Office</p>
+                <span>123 Zayed Road, Dubai, UAE</span>
+                <button>Get Direction →</button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="fxExpand-section" id="fxExpandSection">
+    <div class="fxExpand-sticky">
+
+        <div class="fxExpand-card" id="fxExpandCard">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="">
+            <div class="fxExpand-content">
+                <h2>Build Your Future<br>With Us</h2>
+                <p>
+                    Strategic investments, expert guidance, and long-term value
+                    crafted for your success.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+
+
+
+
+<section class="monte-footer-wrap">
+    <div class="monte-footer-card">
+
+        <div class="monte-footer-grid">
+
+            <div class="mf-brand mf-animate">
+                <h3>MONTE</h3>
+                <p>Building your dreams in real estate with trust, insight, and long-term value.</p>
+            </div>
+
+            <div class="mf-links mf-animate">
+                <h4>Quick Navigation</h4>
+                <ul>
+                    <li>Home</li>
+                    <li>Our Properties</li>
+                    <li>Our Advantages</li>
+                    <li>Our Services</li>
+                </ul>
+            </div>
+
+            <div class="mf-contact mf-animate right">
+                <h4>Founder</h4>
+                <p>We are here to change<br>your future.</p>
+                <div class="mf-btn">Contact Us</div>
+            </div>
+
+            <div class="mf-subscribe mf-animate right">
+                <h4>Subscribe to our news</h4>
+                <p>Stay informed and never miss exclusive updates.</p>
+                <input type="email" placeholder="Enter your email">
+                <button>Subscribe</button>
+
+                <div class="mf-map">
+                    <img src="https://maps.googleapis.com/maps/api/staticmap?center=Dubai&zoom=11&size=400x200">
+                    <p>123 Zayed Road,<br>Dubai, United Arab Emirates</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="mf-bottom">
+            <span>© 2023 Monte Real Estate</span>
+            <span>Terms of Service · Privacy Policy</span>
+        </div>
+
+    </div>
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const section = document.getElementById("scrollSection");
+    const box = document.getElementById("expandBox");
+
+    if (!section || !box) {
+        console.error("Section or box not found");
+        return;
+    }
+
+    const ANIMATION_DISTANCE = 600; // 👈 CHANGE THIS (px)
+
+    window.addEventListener("scroll", () => {
+        const rect = section.getBoundingClientRect();
+        const start = window.innerHeight;
+        const end = start - ANIMATION_DISTANCE;
+
+        /* Calculate progress only within the range */
+        let progress = (start - rect.top) / ANIMATION_DISTANCE;
+        progress = Math.min(Math.max(progress, 0), 1);
+
+        /* Stop animation outside range */
+        if (rect.top > start || rect.top < end) return;
+
+        /* Animation */
+        const scale = 0.5 + progress * 1.3;
+        const radius = 28 - progress * 28;
+
+        box.style.transform = `scale(${scale})`;
+        box.style.borderRadius = `${radius}px`;
+    });
+
+});
+</script>
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const statsSection = document.querySelector(".stats-section");
+    const numbers = document.querySelectorAll(".stat h2");
+
+    let hasAnimated = false;
+
+    function animateNumbers() {
+        if (hasAnimated) return;
+        hasAnimated = true;
+
+        numbers.forEach(num => {
+            const text = num.textContent;
+            const value = parseInt(text.replace(/\D/g, ""));
+            const suffix = text.replace(/[0-9]/g, "");
+
+            let current = 0;
+            const duration = 1500; // total animation time (ms)
+            const startTime = performance.now();
+
+            function update(time) {
+                const progress = Math.min((time - startTime) / duration, 1);
+                current = Math.floor(progress * value);
+                num.textContent = current + suffix;
+
+                if (progress < 1) {
+                    requestAnimationFrame(update);
+                } else {
+                    num.textContent = value + suffix;
+                }
+            }
+
+            requestAnimationFrame(update);
+        });
+    }
+
+    window.addEventListener("scroll", () => {
+        const rect = statsSection.getBoundingClientRect();
+        if (rect.top < window.innerHeight * 0.75) {
+            animateNumbers();
+        }
+    });
+
+});
+</script>
+
+
+
+
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const section = document.getElementById("solutionsSection");
+    const items = document.querySelectorAll(".solution-item");
+    let triggered = false;
+
+    function triggerAnimation(){
+        if(triggered) return;
+        triggered = true;
+
+        items.forEach((item, index) => {
+            setTimeout(() => {
+                item.classList.add("active");
+            }, index * 200); // one-by-one delay
+        });
+    }
+
+    window.addEventListener("scroll", () => {
+        const rect = section.getBoundingClientRect();
+        if(rect.top < window.innerHeight * 0.7){
+            triggerAnimation();
+        }
+    });
+
+});
+</script>
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const section = document.getElementById("vennSection");
+    const area = document.getElementById("vennArea");
+
+    if (!section || !area) return;
+
+    const c1 = area.querySelector(".one");
+    const c2 = area.querySelector(".two");
+    const c3 = area.querySelector(".three");
+
+    let merged = false;
+
+    function isMobile() {
+        return window.innerWidth <= 768;
+    }
+
+    function resetForMobile() {
+        c1.style.transform = "translate(0,0)";
+        c2.style.transform = "translate(0,0)";
+        c3.style.transform = "translate(0,0)";
+
+        c1.style.opacity = 1;
+        c2.style.opacity = 1;
+        c3.style.opacity = 1;
+
+        area.classList.add("merged");
+    }
+
+    function runDesktopAnimation() {
+        window.addEventListener("scroll", () => {
+
+            if (isMobile()) return;
+
+            const rect = section.getBoundingClientRect();
+            const vh = window.innerHeight;
+
+            let progress = (vh - rect.top) / (vh * 2.8);
+            progress = Math.min(Math.max(progress, 0), 1);
+            progress = progress * progress * (3 - 2 * progress);
+
+            const spreadX = 380 * (1 - progress);
+            const spreadY = 300 * (1 - progress);
+
+            c1.style.transform = `translate(${-spreadX}px, ${spreadY * 0.4}px)`;
+            c2.style.transform = `translate(0px, ${-spreadY}px)`;
+            c3.style.transform = `translate(${spreadX}px, ${spreadY * 0.4}px)`;
+
+            c1.style.opacity = progress;
+            c2.style.opacity = progress;
+            c3.style.opacity = progress;
+
+            if (progress > 0.94 && !merged) {
+                merged = true;
+                area.classList.add("merged");
+            }
+
+            if (progress < 0.9 && merged) {
+                merged = false;
+                area.classList.remove("merged");
+            }
+        });
+    }
+
+    // INIT
+    if (isMobile()) {
+        resetForMobile();
+    } else {
+        runDesktopAnimation();
+    }
+
+    // Handle resize (rotate phone / resize window)
+    window.addEventListener("resize", () => {
+        if (isMobile()) {
+            resetForMobile();
+        }
+    });
+
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+<script>
+document.querySelectorAll(".faq-question").forEach(btn => {
+    btn.addEventListener("click", () => {
+        const item = btn.parentElement;
+
+        document.querySelectorAll(".faq-item").forEach(i => {
+            if(i !== item) i.classList.remove("active");
+        });
+
+        item.classList.toggle("active");
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+<script>
+(function fxExpand2D(){
+
+    const section = document.getElementById("fxExpandSection");
+    const card = document.getElementById("fxExpandCard");
+
+    const startWidth = 520;
+    const startHeight = 200;
+
+    function animateExpand(){
+        const rect = section.getBoundingClientRect();
+        const vh = window.innerHeight;
+        const vw = window.innerWidth;
+
+        let progress = (vh - rect.top) / (vh * 1.8);
+        progress = Math.min(Math.max(progress, 0), 1);
+
+        const currentWidth =
+            startWidth + (vw - startWidth) * progress;
+
+        const currentHeight =
+            startHeight + (vh - startHeight) * progress;
+
+        card.style.width = currentWidth + "px";
+        card.style.height = currentHeight + "px";
+        card.style.borderRadius = (28 - progress * 28) + "px";
+    }
+
+    window.addEventListener("scroll", animateExpand);
+
+})();
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+const footerObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add("show");
+        }
+    });
+},{ threshold:0.3 });
+
+document.querySelectorAll(".mf-animate").forEach(el => footerObserver.observe(el));
+footerObserver.observe(document.querySelector(".mf-bottom"));
+</script>
+
+</body>
+</html>
